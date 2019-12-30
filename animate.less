@@ -7,116 +7,146 @@
 @animationFillMode       : both; //规定当动画不播放时（当动画完成时，或当动画有一个延迟未开始播放时），要应用到元素的样式
 
 /* fadeIn  渐渐显示过渡动画 */
-.fadeIn-enter,
-.fadeIn-enter-active {
-  opacity            : 0;
-  transition-delay   : @transitionDelay;
-  transition-duration: @transitionDuration ;
+.fadeIn {
+  animation-name     : fadeIn;
+  animation-duration : @animationDuration;
+  animation-delay    : @animationDelay;
+  animation-fill-mode: @animationFillMode;
 
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    ;
+
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+
+      opacity: 1;
+    }
+  }
 }
 
-.fadeIn-enter-to,
-.fadeIn-leave {
-  opacity: 0.5;
-}
 
-.fadeIn-leave-active,
-.fadeIn-leave-to {
-  opacity            : 1;
-  transition-delay   : @transitionDelay;
-  transition-duration: @transitionDuration ;
-}
 
 /* fadeInUp  自下往上渐渐显示 */
-.fadeInUp-enter,
-.fadeInUp-enter-active {
-  opacity            : 0;
-  transition-delay   : @transitionDelay;
-  transition-duration: @transitionDuration ;
-  transform          : translateY(200px);
+.fadeInUp {
+  animation-name     : fadeInUp;
+  animation-duration : @animationDuration;
+  animation-delay    : @animationDelay;
+  animation-fill-mode: @animationFillMode;
+
+  @keyframes fadeInUp {
+    0% {
+      opacity  : 0;
+      transform: translateY(200px);
+    }
+
+    ;
+
+    50% {
+      opacity  : 0.5;
+      transform: translateY(100px);
+    }
+
+    100% {
+
+      opacity  : 1;
+      transform: translateY(0);
+    }
+  }
 }
 
-.fadeInUp-enter-to,
-.fadeInUp-leave {
-  opacity  : 0.5;
-  transform: translateY(100px);
-}
-
-.fadeInUp-leave-active,
-.fadeInUp-leave-to {
-  opacity            : 1;
-  transition-delay   : @transitionDelay;
-  transition-duration: @transitionDuration ;
-  transform          : translateY(0);
-}
 
 /* fadeIndown  自上往下渐渐显示 */
-.fadeInDown-enter,
-.fadeInDown-enter-active {
-  opacity            : 0;
-  transition-delay   : @transitionDelay;
-  transition-duration: @transitionDuration ;
-  transform          : translateY(0px);
-}
+.fadeIndown {
+  animation-name     : fadeIndown;
+  animation-duration : @animationDuration;
+  animation-delay    : @animationDelay;
+  animation-fill-mode: @animationFillMode;
 
-.fadeInDown-enter-to,
-.fadeInDown-leave {
-  opacity  : 0.5;
-  transform: translateY(100px);
-}
+  @keyframes fadeIndown {
+    0% {
+      opacity            : 0;
+      transition-delay   : @transitionDelay;
+      transition-duration: @transitionDuration ;
+      transform          : translateY(0px);
+    }
 
-.fadeInDown-leave-active,
-.fadeInDown-leave-to {
-  opacity            : 1;
-  transition-delay   : @transitionDelay;
-  transition-duration: @transitionDuration ;
-  transform          : translateY(200px);
+    50% {
+      opacity  : 0.5;
+      transform: translateY(100px);
+    }
+
+    100% {
+      opacity            : 1;
+      transition-delay   : @transitionDelay;
+      transition-duration: @transitionDuration ;
+      transform          : translateY(200px);
+    }
+  }
 }
 
 /* fadeInRight  自左往右渐渐显示 */
-.fadeInRight-enter,
-.fadeInRight-enter-active {
-  opacity            : 0;
-  transition-delay   : @transitionDelay;
-  transition-duration: @transitionDuration ;
-  transform          : translateX(-200px);
+.fadeInRight {
+  animation-name     : fadeInRight;
+  animation-duration : @animationDuration;
+  animation-delay    : @animationDelay;
+  animation-fill-mode: @animationFillMode;
+
+  @keyframes fadeInRight {
+    0% {
+      opacity            : 0;
+      transition-delay   : @transitionDelay;
+      transition-duration: @transitionDuration ;
+      transform          : translateX(-200px);
+    }
+
+    50% {
+      opacity  : 0.5;
+      transform: translateX(-100px);
+    }
+
+    100% {
+      opacity            : 1;
+      transition-delay   : @transitionDelay;
+      transition-duration: @transitionDuration ;
+      transform          : translateX(0px);
+    }
+  }
 }
 
-.fadeInRight-enter-to,
-.fadeInRight-leave {
-  opacity  : 0.5;
-  transform: translateX(-100px);
-}
+/* fadeInLeft  自右往左渐渐显示 */
+.fadeInLeft {
+  animation-name     : fadeInLeft;
+  animation-duration : @animationDuration;
+  animation-delay    : @animationDelay;
+  animation-fill-mode: @animationFillMode;
 
-.fadeInRight-leave-active,
-.fadeInRight-leave-to {
-  opacity            : 1;
-  transition-delay   : @transitionDelay;
-  transition-duration: @transitionDuration ;
-  transform          : translateX(0px);
-}
+  @keyframes fadeInLeft {
+    0% {
+      opacity            : 0;
+      transition-delay   : @transitionDelay;
+      transition-duration: @transitionDuration ;
+      transform          : translateX(200px);
+    }
 
-/* fadeInRight  自右往左渐渐显示 */
-.fadeInLeft-enter,
-.fadeInLeft-enter-active {
-  opacity            : 0;
-  transition-delay   : @transitionDelay;
-  transition-duration: @transitionDuration ;
-  transform          : translateX(200px);
-}
+    50% {
+      opacity  : 0.5;
+      transform: translateX(100px);
+    }
 
-.fadeInLeft-enter-to,
-.fadeInLeft-leave {
-  opacity  : 0.5;
-  transform: translateX(100px);
-}
-
-.fadeInLeft-leave-active,
-.fadeInLeft-leave-to {
-  opacity            : 1;
-  transition-delay   : @transitionDelay;
-  transition-duration: @transitionDuration ;
-  transform          : translateX(0px);
+    100% {
+      opacity            : 1;
+      transition-delay   : @transitionDelay;
+      transition-duration: @transitionDuration ;
+      transform          : translateX(0px);
+    }
+  }
 }
 
 /*-------------------------------------------------------------------*/
@@ -910,12 +940,12 @@
   @keyframes rollIn {
     0% {
       transform: translateX(-100%) rotate(-120deg);
-      opacity         : 0;
+      opacity  : 0;
     }
 
     100% {
       transform: translateX(0px) rotate(0deg);
-      opacity         : 1;
+      opacity  : 1;
     }
   }
 }
@@ -930,12 +960,12 @@
   @keyframes rollOut {
     0% {
       transform: translateX(0) rotate(0);
-      opacity         : 1;
+      opacity  : 1;
     }
 
     100% {
       transform: translateX(100%) rotate(120deg);
-      opacity         : 0;
+      opacity  : 0;
     }
   }
 }
