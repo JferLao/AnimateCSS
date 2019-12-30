@@ -167,3 +167,7 @@ none		|不改变默认行为。																				|
 forwards	|当动画完成后，保持最后一个属性值（在最后一个关键帧中定义）。									|
 backwards	|在 animation-delay 所指定的一段时间内，在动画显示之前，应用开始属性值（在第一个关键帧中定义）。|
 |both		|向前和向后填充模式都被应用。																	|
+
+
+下面是我自己写的一个动画库,使用也很简单,下载文件然后在文件中引入,想使用什么方法直接在结构中添加对应的类名即可,修改也很方便,直接即可修改
+[模仿Animate.css制作的一个库](https://github.com/JferLao/AnimateCSS/blob/master/animate.less)
