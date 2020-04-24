@@ -2,8 +2,8 @@
 
 首先对于css3的动画(animate)来谈,很大程度css的动画都要依赖css的另外两个属性,一个是变形(transform),一个则是过渡(transtion),很多人在学习的过程中都会对这三个概念产生疑惑,分不清都是干嘛用到,这里先简单说一下。
 
-# translate变形
-**2D的translate属性**
+# transform变形
+**2D的transform属性**
 
 方法|描述
 ---|:--
@@ -20,7 +20,7 @@ skewX(angle)|定义 2D 倾斜转换，沿着 X 轴。
 skewY(angle)|定义 2D 倾斜转换，沿着 Y 轴。
 
 
-**3D的translate属性**
+**3D的transform属性**
 
 方法|描述
 ---|:--
@@ -29,7 +29,7 @@ rotateY(angle) |元素围绕其 Y 轴以给定的度数进行旋转。
 
 另外除了2D和3D的translate属性之外还有以下属性
 
-**其它translate属性**
+**其它transform属性**
 
 方法|描述
 ---|:--
